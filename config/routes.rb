@@ -11,4 +11,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  GET "restaurants", to: "restaurants#index"
+  # A visitor can add a new restaurant, and be redirected to the show view of that new restaurant.
+  GET "restaurants/new", to: "restaurants#new"
+  POST "restaurants", to: ?
+  # A visitor can see the details of a restaurant, with all the reviews related to the restaurant.
+  GET "restaurants/:id", to: "restaurants#reviews"
+  # A visitor can add a new review to a restaurant
+  GET "restaurants/:id/reviews/new", to: "restaurants# ?"
+  POST "restaurants/:id/reviews", to: "?"
+  # And that’s it!
 end
